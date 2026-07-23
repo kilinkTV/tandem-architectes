@@ -51,10 +51,13 @@
   ];
 
   MOSAIC_PHOTOS.forEach(function (src, i) {
+    const cell = document.createElement("div");
+    cell.className = "hero__mosaic-cell";
     const img = document.createElement("img");
     img.src = src;
     img.alt = "";
     img.loading = i < 12 ? "eager" : "lazy";
-    mosaic.appendChild(img);
+    cell.appendChild(img);
+    mosaic.appendChild(cell);
   });
 })();
