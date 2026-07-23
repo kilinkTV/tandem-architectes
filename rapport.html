@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapport — Refonte Tandem Architectes</title>
+<style>
+  @page{
+    size: A4 landscape;
+    margin: 10mm 12mm;
+  }
+  :root{
+    --paper:#faf9f6;
+    --ink:#201e1c;
+    --grey:#6f6a60;
+    --line:#e0dcd2;
+    --head-bg:#efeade;
+    --good:#33553f;
+    --pending:#8a5a24;
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html, body{ height:100%; }
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    margin:0;
+    padding:22px 26px;
+  }
+  .sheet{ max-width:1150px; margin:0 auto; }
+
+  h1{
+    font-size:19px;
+    font-weight:600;
+    margin:0 0 4px;
+  }
+  .subtitle{
+    color:var(--grey);
+    font-size:12px;
+    margin:0 0 16px;
+  }
+
+  h2{
+    font-size:13px;
+    font-weight:600;
+    margin:0 0 8px;
+  }
+
+  .columns{
+    display:grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap:0 24px;
+  }
+  section{ margin-bottom:0; }
+
+  .table-wrap{ overflow-x:auto; }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:11.5px;
+  }
+  th, td{
+    text-align:left;
+    padding:6px 9px;
+    border:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.35;
+  }
+  th{
+    background:var(--head-bg);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    color:var(--grey);
+    font-weight:600;
+  }
+  td.status-good{ color:var(--good); font-weight:600; white-space:nowrap; }
+  td.status-pending{ color:var(--pending); font-weight:600; white-space:nowrap; }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <h1>Refonte du site Tandem Architectes</h1>
+  <p class="subtitle">Bilan du prototype statique, avant portage sur WordPress.</p>
+
+  <div class="columns">
+    <section>
+      <h2>Le site actuel en ligne → changements effectués</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Sur tandem-architectes.com aujourd'hui</th>
+            <th>Changements effectués</th>
+          </tr>
+          <tr>
+            <td>Titre de page vide, aucune meta description, aucun H1, aucune balise Open Graph</td>
+            <td>SEO complet ajouté : titres, descriptions, canonical, Open Graph/Twitter par page et par projet, données structurées, sitemap</td>
+          </tr>
+          <tr>
+            <td>Grille d'accueil et page Projets : catégories et photos de projets mélangées dans le même bloc</td>
+            <td>Grille refaite : navigation par catégorie séparée des vignettes de projets</td>
+          </tr>
+          <tr>
+            <td>Site non optimisé pour mobile</td>
+            <td>Version responsive complète, testée sur mobile et sur ordinateur</td>
+          </tr>
+          <tr>
+            <td>Mise en page datée (thème Divi / plugin The Grid), peu de cohérence visuelle</td>
+            <td>Nouveau design sobre en noir &amp; blanc, cohérent sur tout le site</td>
+          </tr>
+          <tr>
+            <td>Contenu des 47 réalisations dispersé, aucune fiche dédiée claire par projet</td>
+            <td>47 fiches projet reconstruites : photos complètes, descriptif complet, navigation soignée</td>
+          </tr>
+          <tr>
+            <td>Pas de bouton clair pour revenir à la liste des projets depuis une fiche</td>
+            <td>Bouton « retour » visible en haut et en bas de chaque fiche</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ce qui reste à faire</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Point</th>
+            <th>Statut</th>
+          </tr>
+          <tr>
+            <td>Portage du prototype sur WordPress</td>
+            <td class="status-pending">En attente d'accès</td>
+          </tr>
+          <tr>
+            <td>Formulaire de contact (ouvre la messagerie pour l'instant)</td>
+            <td class="status-pending">À connecter</td>
+          </tr>
+          <tr>
+            <td>« Techno » affiche un contenu dupliqué</td>
+            <td class="status-pending">Bug du site actuel</td>
+          </tr>
+          <tr>
+            <td>« Circulez ! (Ornex) » : page vide</td>
+            <td class="status-pending">Bug du site actuel</td>
+          </tr>
+          <tr>
+            <td>« Au sommet », « Sous l'océan », « Gourmandise » : aucun texte</td>
+            <td class="status-pending">Bug du site actuel</td>
+          </tr>
+          <tr>
+            <td>7 projets « Intérieur » : fiches supprimées (erreur 404)</td>
+            <td class="status-pending">Bug du site actuel</td>
+          </tr>
+          <tr>
+            <td>Une image du projet « Dans la boîte » est un lien mort</td>
+            <td class="status-pending">Bug du site actuel</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
